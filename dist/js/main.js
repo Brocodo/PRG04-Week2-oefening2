@@ -1,15 +1,14 @@
 var Bubble = (function () {
     function Bubble() {
+        var b = document.createElement("bubble");
+        document.body.appendChild(b);
+        var startx = Math.random() * window.innerWidth;
+        b.style.left = startx + "px";
     }
     return Bubble;
 }());
 var Fish = (function () {
     function Fish() {
-    }
-    return Fish;
-}());
-var Game = (function () {
-    function Game() {
         var f = document.createElement("fish");
         document.body.appendChild(f);
         var fishx = Math.random() * window.innerWidth;
@@ -18,10 +17,13 @@ var Game = (function () {
         f.style.top = fishy + "px";
         f.style.webkitFilter = "hue-rotate(45deg)";
         f.style.filter = "hue-rotate(45deg)";
-        var b = document.createElement("bubble");
-        document.body.appendChild(b);
-        var startx = Math.random() * window.innerWidth;
-        b.style.left = startx + "px";
+    }
+    return Fish;
+}());
+var Game = (function () {
+    function Game() {
+        new Fish();
+        new Bubble();
     }
     return Game;
 }());
