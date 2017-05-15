@@ -1,5 +1,5 @@
 class Bubble {
-            
+
     constructor() {
         // bubble
         let b = document.createElement("bubble");

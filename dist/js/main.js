@@ -15,15 +15,18 @@ var Fish = (function () {
         var fishy = Math.random() * window.innerHeight;
         f.style.left = fishx + "px";
         f.style.top = fishy + "px";
-        f.style.webkitFilter = "hue-rotate(45deg)";
-        f.style.filter = "hue-rotate(45deg)";
+        var ranColDeg = Math.random() * 360;
+        f.style.webkitFilter = "hue-rotate(" + ranColDeg + "deg)";
+        f.style.filter = "hue-rotate(" + ranColDeg + "45deg)";
     }
     return Fish;
 }());
 var Game = (function () {
     function Game() {
-        new Fish();
-        new Bubble();
+        for (i = 0; i < 100; i++) {
+            new Fish();
+            new Bubble();
+        }
     }
     return Game;
 }());

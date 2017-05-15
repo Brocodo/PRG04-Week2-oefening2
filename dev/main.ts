@@ -2,12 +2,14 @@
 /// <reference path="bubble.ts"/>
 
 class Game {
-    
+
     constructor() {
-        new Fish();
-        new Bubble();
+        for(i = 0; i < 100; i++){
+            new Fish();
+            new Bubble();
+        }
     }
-} 
+}
 
 
 // load
